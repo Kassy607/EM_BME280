@@ -1,0 +1,137 @@
+var id = '1YhfbjPTAq9Uvc7QroUeOBcMcGd2UEOxA5CVLvRTBXac';  // ID der Tabelle
+ 
+function doGet(e) {                 // GET Parameter Empfangen
+ 
+  if (e.parameter == undefined) {   // Wenn keine Parametr über GET Empfangen
+    result = 'Parameter fehlen';
+  }
+  else {
+    var sheet = SpreadsheetApp.openById(id).getActiveSheet(); // Zuweisung des Tabellendokuments und AktiverTabelle einer Variable
+    var newRow = sheet.getLastRow() + 1;  // Letzte beschriebene Zeile + 1 
+    var rawData = [];        // Array anlegen
+  
+    var time1 = new Date(); // Timestamp in Spalte A Erste Elemet des ArraysrowData
+    time1.setSeconds(time1.getSeconds() - 9);
+    var time2 = new Date();
+    time2.setSeconds(time2.getSeconds() - 8);
+    var time3 = new Date();
+    time3.setSeconds(time3.getSeconds() - 7);
+    var time4 = new Date();
+    time4.setSeconds(time4.getSeconds() - 6);
+    var time5 = new Date();
+    time5.setSeconds(time5.getSeconds() - 5);
+    var time6 = new Date();
+    time6.setSeconds(time6.getSeconds() - 4);
+    var time7 = new Date();
+    time7.setSeconds(time7.getSeconds() - 3);
+    var time8 = new Date();
+    time8.setSeconds(time8.getSeconds() - 2);
+    var time9 = new Date();
+    time9.setSeconds(time9.getSeconds() - 1);
+    var time10 = new Date();
+    time10.setSeconds(time10.getSeconds() + 0);
+
+    for (var param in e.parameter) {    // Alle empfangenen Parametr Durchgenen
+      var value = e.parameter[param];   // Werte einlesen
+      rawData[parseInt(param)] = value; // Werte in Array Speichern. Position bestimmt die Zahl im Parametr
+    } 
+
+      finalRowData = [];
+      finalRowData [0] = time1;
+      finalRowData [1] = rawData[1];
+      finalRowData [2] = rawData[2];
+      finalRowData [3] = rawData[3];
+
+      finalRowData2 = [];
+      finalRowData2 [0] = time2;
+      finalRowData2 [1] = rawData[4];
+      finalRowData2 [2] = rawData[5];
+      finalRowData2 [3] = rawData[6];
+
+      finalRowData3 = [];
+      finalRowData3 [0] = time3;
+      finalRowData3 [1] = rawData[7];
+      finalRowData3 [2] = rawData[8];
+      finalRowData3 [3] = rawData[9];
+
+      finalRowData4 = [];
+      finalRowData4 [0] = time4;
+      finalRowData4 [1] = rawData[10];
+      finalRowData4 [2] = rawData[11];
+      finalRowData4 [3] = rawData[12];
+
+      finalRowData5 = [];
+      finalRowData5 [0] = time5;
+      finalRowData5 [1] = rawData[13];
+      finalRowData5 [2] = rawData[14];
+      finalRowData5 [3] = rawData[15];
+
+      finalRowData6 = [];
+      finalRowData6 [0] = time6;
+      finalRowData6 [1] = rawData[16];
+      finalRowData6 [2] = rawData[17];
+      finalRowData6 [3] = rawData[18];
+
+      finalRowData7 = [];
+      finalRowData7 [0] = time7;
+      finalRowData7 [1] = rawData[19];
+      finalRowData7 [2] = rawData[20];
+      finalRowData7 [3] = rawData[21];
+
+      finalRowData8 = [];
+      finalRowData8 [0] = time8;
+      finalRowData8 [1] = rawData[22];
+      finalRowData8 [2] = rawData[23];
+      finalRowData8 [3] = rawData[24];
+
+      
+      finalRowData9 = [];
+      finalRowData9 [0] = time9;
+      finalRowData9 [1] = rawData[25];
+      finalRowData9 [2] = rawData[26];
+      finalRowData9 [3] = rawData[27];
+
+      finalRowData10 = [];
+      finalRowData10 [0] = time10;
+      finalRowData10 [1] = rawData[28];
+      finalRowData10 [2] = rawData[29];
+      finalRowData10 [3] = rawData[30];
+    
+    
+    // Lege neue Zeile an in der Länge des Arrays mit Werten
+    var newRange = sheet.getRange(newRow, 1, 1, finalRowData.length);
+    newRange.setValues([finalRowData]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange2 = sheet.getRange(newRow+1, 1, 1, finalRowData2.length);
+    newRange2.setValues([finalRowData2]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange3 = sheet.getRange(newRow+2, 1, 1, finalRowData3.length);
+    newRange3.setValues([finalRowData3]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange4 = sheet.getRange(newRow+3, 1, 1, finalRowData4.length);
+    newRange4.setValues([finalRowData4]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange5 = sheet.getRange(newRow+4, 1, 1, finalRowData5.length);
+    newRange5.setValues([finalRowData5]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange6 = sheet.getRange(newRow+5, 1, 1, finalRowData6.length);
+    newRange6.setValues([finalRowData6]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange7 = sheet.getRange(newRow+6, 1, 1, finalRowData7.length);
+    newRange7.setValues([finalRowData7]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange8 = sheet.getRange(newRow+7, 1, 1, finalRowData8.length);
+    newRange8.setValues([finalRowData8]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange9 = sheet.getRange(newRow+8, 1, 1, finalRowData9.length);
+    newRange9.setValues([finalRowData9]);    // Zeile  mit Daten aus Array befüllen
+
+    var newRange10 = sheet.getRange(newRow+9, 1, 1, finalRowData10.length);
+    newRange10.setValues([finalRowData10]);    // Zeile  mit Daten aus Array befüllen
+
+    var result =  finalRowData   // Text des Anworts
+  }
+ 
+  // Antwort als Text an Browser senden
+  return ContentService.createTextOutput(result);
+}
