@@ -1,5 +1,5 @@
 /*
-Who: Kassandra Karger, Laurin Wandel (kaka1024, wala1011)
+Who: Kassandra Karger, Laurin Wandel (kaka1024, wala1011 - Laurin.Wandel@web.de)
 When: 19.11.2022
 What: Readout of BME280 in defined cycle. DeepSleep between Readout. 
 Switch between data upload to database and data on display depending on Deepsleep Interupt (Touch or Timer)
@@ -24,10 +24,10 @@ GND --> GND
 
 int long cycle = 10000000;    //Cycle time in microseconds (must be higher than 5 seconds)
 
-//const char* ssid     = "Vodafone-A680";   
-const char* ssid     = "FRITZ!Box 7590 UP";  
-//const char* password = "JtnFDurAbpdetHBa";  
-const char* password = "45525509900873963179";
+const char* ssid     = "Vodafone-A680";   
+//const char* ssid     = "FRITZ!Box 7590 UP";  
+const char* password = "JtnFDurAbpdetHBa";  
+//const char* password = "45525509900873963179";
 
 const char* server = "script.google.com";  // Server URL
 const char* key = "AKfycbzZ730s0HOAxjby1vl6fYl4TYu146GwFhbD1Mpn8UTGgGsvalUbRYphoTq_AnyZVECB"; // google script key
