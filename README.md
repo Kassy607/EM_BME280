@@ -24,7 +24,7 @@ Before starting, make sure you have the following:
 2. Install the required libraries for the BME280 sensor. You can use the "Adafruit BME280" library.
 3. Connect the Lolin 32 Lite board to your computer via USB.
 4. Select the appropriate board and port in the Arduino IDE or PlatformIO.
-5. Open the code editor and copy the one of the two code we provide (depending on your usecase)
+5. Open the code editor and copy the one of the two code we provide (depending on your usecase --> if you operate with a battery, we recommend using the code with Deep Sleep Modus)
 6. Modify the code if necessary, such as adjusting the Wi-Fi credentials and Google Sheets configuration (see the exmaple file for Data Transmission with Google Apps Script).
 7. Upload the code to the Lolin 32 Lite board.
 
