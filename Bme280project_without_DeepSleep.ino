@@ -24,10 +24,9 @@ GND --> GND
 
 //int long cycle = 10000000;    //Cycle time in microseconds (must be higher than 5 seconds)
 
-//const char* ssid     = "Vodafone-A680";   
-const char* ssid     = "FRITZ!Box 7590 UP";  
-//const char* password = "JtnFDurAbpdetHBa";  
-const char* password = "45525509900873963179";
+
+const char* ssid     = "WIFI_Name";     
+const char* password = "WIFI_Password";  
 
 const char* server = "script.google.com";  // Server URL
 const char* key = "AKfycbzX9wwUrPA0tzw8yjO00H1P9aHWGG4u-wQfClPQYbAZhvVfkP6rqUwULGwXuvCI6Cua"; // google script key
